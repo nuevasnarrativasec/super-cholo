@@ -56,9 +56,9 @@
 
     /* ── TITLE BLOCK ── */
     .title-block {
-      margin: 2.5rem 0;
-      padding: 3rem 2.5rem;
-      text-align: center;
+          margin: 0 auto 2.5rem;
+        padding: 3rem 2.5rem;
+        text-align: center;
     }
 
     .title-block h1 {
@@ -207,4 +207,9 @@ p.creador{
     font-size: 0.9rem;
     color: var(--text-muted);
     margin-top: 1.5rem;
+}
+img.logo{
+    display: block;
+    margin: 0 auto 1.5rem;
+    max-width: 180px;
 }
