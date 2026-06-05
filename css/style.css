@@ -201,3 +201,9 @@
             display: block;
             font-weight: 800;
         }
+
+p.creador{
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-top: 1.5rem;
+}
