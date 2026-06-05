@@ -1,0 +1,192 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #f5f0f0;
+      --border: #d8cece;
+      --text-dark: #1a1a1a;
+      --text-muted: #999;
+      --btn-bg: #e4dada;
+      --btn-text: #555;
+      --max-w: 900px;
+    }
+
+    body {
+      background: #fff;
+      font-family: Georgia, 'Times New Roman', serif;
+      color: var(--text-dark);
+    }
+
+    /* ── VIDEO HEADER ── */
+    .video-header {
+      width: 100%;
+      aspect-ratio: 16 / 7;
+        background: #d7bf9f;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .video-header video {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    /* placeholder shown when no video src */
+    .video-header .placeholder-label {
+      position: absolute;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 700;
+      font-size: clamp(1rem, 3vw, 1.5rem);
+      letter-spacing: 0.1em;
+      color: var(--text-dark);
+      pointer-events: none;
+    }
+
+    /* ── CONTENT WRAPPER ── */
+    .content {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* ── TITLE BLOCK ── */
+    .title-block {
+      margin: 2.5rem 0;
+      padding: 3rem 2.5rem;
+      text-align: center;
+    }
+
+    .title-block h1 {
+      font-size: clamp(1.6rem, 4vw, 2.6rem);
+      font-weight: 400;
+      line-height: 1.25;
+      color: var(--text-muted);
+      margin-bottom: 1.8rem;
+    }
+
+    .title-block p {
+      font-size: 0.82rem;
+      line-height: 1.65;
+      color: var(--text-dark);
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .title-block p strong {
+      font-style: normal;
+    }
+
+    /* ── EPISODES GRID ── */
+    .episodes {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem 1.25rem;
+      margin-bottom: 4rem;
+    }
+
+    .episode {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .episode-cover {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      border: 1px solid var(--border);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fff;
+      position: relative;
+    }
+
+    .episode-cover img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .episode-cover .coming-soon {
+      text-align: center;
+      color: var(--text-muted);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.8rem;
+      line-height: 1.5;
+      padding: 1rem;
+    }
+
+    .btn-download {
+      display: inline-block;
+      padding: 0.45rem 1.4rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--btn-bg);
+      color: var(--btn-text);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      font-weight: 600;
+      text-transform: uppercase;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .btn-download:hover:not([disabled]) {
+      background: #c8bcbc;
+      color: #111;
+    }
+
+    .btn-download[disabled] {
+      opacity: 0.55;
+      cursor: default;
+      pointer-events: none;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      .episodes {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .title-block {
+        padding: 0 1.25rem;
+      }
+      .video-header{
+        aspect-ratio: auto;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .episodes {
+        grid-template-columns: 1fr;
+      }
+    }
+
+.main-footer{
+    background-color: #000;
+    padding: 20px 0;
+}
+    .main-footer img{
+        display: block;
+        margin: 10px auto 20px;
+        max-width: 120px;
+    }
+    .main-footer p{
+        color: #fff;
+        font-family: "Roboto", sans-serif;
+        font-weight: 300;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+        .main-footer p span{
+            display: block;
+            font-weight: 800;
+        }
