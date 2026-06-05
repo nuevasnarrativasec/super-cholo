@@ -19,7 +19,7 @@
     /* ── VIDEO HEADER ── */
     .video-header {
       width: 100%;
-      aspect-ratio: 16 / 7;
+      aspect-ratio: 16 / 8;
         background: #d7bf9f;
       display: flex;
       align-items: center;
@@ -29,10 +29,11 @@
     }
 
     .video-header video {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      display: block;
+          width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        object-position: top;
     }
 
     /* placeholder shown when no video src */
